@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "m-c-2026-10-19.1",
+  "status": "mapped_with_explicit_conflicts",
+  "officialEntries": 262,
+  "mappedEntries": 262,
+  "nationalDexSpecies": 231,
+  "battleForms": 89,
+  "megaForms": 82,
+  "megaStones": 81,
+  "transitions": 89,
+  "calculatorAliases": [
+    {
+      "officialId": "0681-000",
+      "showdownId": "aegislash",
+      "calculatorId": "aegislashshield"
+    }
+  ],
+  "errors": [],
+  "conflicts": [
+    {
+      "formId": "battle-form:hawluchamega",
+      "showdownId": "hawluchamega",
+      "field": "default_ability",
+      "status": "conflict",
+      "showdown": "No Guard",
+      "calculator": "Limber",
+      "resolution": "unresolved_use_no_implicit_calculator_default"
+    },
+    {
+      "formId": "battle-form:skarmorymega",
+      "showdownId": "skarmorymega",
+      "field": "default_ability",
+      "status": "conflict",
+      "showdown": "Stalwart",
+      "calculator": "Keen Eye",
+      "resolution": "unresolved_use_no_implicit_calculator_default"
+    }
+  ],
+  "gameValidation": "pending",
+  "runtimeReady": false,
+  "catalogSha256": "01fc28d8d3ea59ae01c5ebc8054c67cd425ab80189df61edff0960c54712962e"
+}

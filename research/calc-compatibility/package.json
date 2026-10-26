@@ -1,0 +1,12 @@
+{
+  "name": "champions-hero-calc-research",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Prueba exploratoria de compatibilidad, separada del producto",
+  "scripts": {
+    "probe": "node probe.cjs"
+  },
+  "dependencies": {
+    "@smogon/calc": "0.12.0"
+  }
+}

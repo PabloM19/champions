@@ -1,0 +1,50 @@
+// @vitest-environment jsdom
+import 'fake-indexeddb/auto';
+import {beforeEach,afterEach,it,expect,vi} from 'vitest';
+import {render,screen,within,waitFor,cleanup,fireEvent} from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import {App} from '../src/App';
+import {Practice} from '../src/components/Practice';
+import {db,saveTeam,cacheLibrary} from '../src/domain/storage';
+import {REVIEW_ITEMS} from '../src/domain/practice';
+import {ownFixture,libraryFixture} from './practice-fixtures';
+beforeEach(async()=>{await Promise.all(db.tables.map(t=>t.clear()));localStorage.clear();});
+afterEach(()=>{cleanup();vi.restoreAllMocks();});
+it('keeps opponent sets hidden, locks a decision, reveals on request, and restores its self review',async()=>{
+  await saveTeam(ownFixture());await cacheLibrary(libraryFixture());const user=userEvent.setup();const view=render(<App/>);
+  await user.click(screen.getByRole('button',{name:'Entrenar'}));
+  await screen.findByText('Prepara tu sesión.');
+  expect((screen.getByLabelText('Porcentaje de rivales reales') as HTMLInputElement).value).toBe('70');
+  fireEvent.change(screen.getByLabelText('Porcentaje de rivales reales'),{target:{value:'100'}});
+  await user.click(screen.getByRole('checkbox',{name:'También quiero predecir las dos leads rivales.'}));
+  await user.click(screen.getByRole('button',{name:'Crear ejercicio'}));
+  await screen.findByText('¿Cómo abrirías este combate?');
+  const rival=screen.getByRole('region',{name:'Team preview rival'}),own=screen.getByRole('region',{name:'Elegir tus leads'});
+  expect(rival.textContent).not.toContain('Charizardite Y');expect(rival.textContent).not.toContain('Heat Wave');expect(rival.textContent).not.toContain('Blaze');
+  expect(screen.queryByText('Fixture event')).toBeNull();expect(screen.queryByRole('button',{name:'Revelar sets'})).toBeNull();
+  const confirm=screen.getByRole('button',{name:'Confirmar decisión'}) as HTMLButtonElement;expect(confirm.disabled).toBe(true);
+  await user.click(within(own).getByRole('button',{name:'Charizard, plaza 1'}));await user.click(within(own).getByRole('button',{name:'Venusaur, plaza 2'}));
+  expect((within(own).getByRole('button',{name:'Farigiraf, plaza 3'}) as HTMLButtonElement).disabled).toBe(true);
+  await user.type(screen.getByLabelText('Tu razonamiento'),'  Mi plan: preservar una alternativa.  ');expect(confirm.disabled).toBe(true);
+  await user.click(within(rival).getByRole('button',{name:'Farigiraf, plaza 3'}));await user.click(within(rival).getByRole('button',{name:'Incineroar, plaza 4'}));
+  expect(confirm.disabled).toBe(false);await user.click(confirm);
+  await screen.findByRole('heading',{name:'Tu razonamiento'});
+  expect(screen.queryByRole('button',{name:'Confirmar decisión'})).toBeNull();expect(screen.getAllByText('Indeterminado')).toHaveLength(7);
+  const attempt=(await db.attempts.toArray())[0];expect(attempt.reason).toBe('  Mi plan: preservar una alternativa.  ');expect(attempt.prediction).toEqual([2,3]);
+  await user.click(screen.getByRole('button',{name:'Revelar sets'}));expect(screen.getByRole('link',{name:'Consultar fuente'})).toBeTruthy();
+  for(const [i,item] of REVIEW_ITEMS.entries())await user.click(within(screen.getByRole('group',{name:item.label})).getByRole('radio',{name:i<2?'Lo contemplé':'Lo omití'}));
+  await user.click(screen.getByRole('button',{name:'Guardar autoevaluación'}));await screen.findByRole('button',{name:'Autoevaluación guardada'});
+  await user.click(screen.getByRole('button',{name:'Revisar historial'}));await screen.findByText('Lo que tú has revisado.');expect(screen.getByText(/1 decisiones guardadas · 1 autoevaluaciones/)).toBeTruthy();
+  view.unmount();render(<App/>);await user.click(screen.getByRole('button',{name:'Entrenar'}));await screen.findByRole('button',{name:'Autoevaluación guardada'});expect(await db.attempts.count()).toBe(1);expect((await db.attempts.get(attempt.id))?.reason).toBe(attempt.reason);
+});
+it('recovers unfinished choices and free text after remount without revealing rival sets',async()=>{
+  const teams=[ownFixture()],library=libraryFixture();const props={teams,library,onTeams:vi.fn(),onLibrary:vi.fn()};const user=userEvent.setup();const first=render(<Practice {...props}/>);
+  await screen.findByText('Prepara tu sesión.');await user.click(screen.getByRole('button',{name:'Crear ejercicio'}));await screen.findByText('¿Cómo abrirías este combate?');
+  const own=screen.getByRole('region',{name:'Elegir tus leads'});await user.click(within(own).getByRole('button',{name:'Charizard, plaza 1'}));await user.type(screen.getByLabelText('Tu razonamiento'),'Quiero recordar este borrador.');
+  await waitFor(async()=>expect((await db.practiceDrafts.toArray())[0].reason).toBe('Quiero recordar este borrador.'));
+  first.unmount();render(<Practice {...props}/>);await screen.findByText('¿Cómo abrirías este combate?');
+  expect((screen.getByLabelText('Tu razonamiento') as HTMLTextAreaElement).value).toBe('Quiero recordar este borrador.');expect(within(screen.getByRole('region',{name:'Elegir tus leads'})).getByRole('button',{name:'Charizard, plaza 1'}).getAttribute('aria-pressed')).toBe('true');expect(screen.queryByRole('button',{name:'Revelar sets'})).toBeNull();expect(await db.attempts.count()).toBe(0);
+});
+it('reports an empty real pool without substituting a generated case',async()=>{
+  const user=userEvent.setup();render(<Practice teams={[ownFixture()]} library={null} onTeams={vi.fn()} onLibrary={vi.fn()}/>);await screen.findByText('Prepara tu sesión.');await user.click(screen.getByRole('button',{name:'Crear ejercicio'}));const alert=await screen.findByRole('alert');expect(alert.textContent).toContain('No hay equipos reales aptos');expect(await db.exercises.count()).toBe(0);
+});

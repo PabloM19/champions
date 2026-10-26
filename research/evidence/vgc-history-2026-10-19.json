@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-19",
+  "method": "interactive_browser_navigation",
+  "scope": "UI and provider documentation review; no data-file probe or ingestion performed.",
+  "pagesVisited": [
+    "https://vgchistory.com/",
+    "https://vgchistory.com/tournaments/regional-louisville-2027",
+    "https://vgchistory.com/tournaments/regional-louisville-2027#sheet=regional-louisville-2027%3A1",
+    "https://vgchistory.com/data",
+    "https://vgchistory.com/coverage",
+    "https://vgchistory.com/about",
+    "https://vgchistory.com/regulations",
+    "https://vgchistory.com/runs/regional-louisville-2027/joseph-ugarte",
+    "https://vgchistory.com/ask?era=r-m-c#q=(incineroar,careful),(gengar-mega)&view=stats"
+  ],
+  "uiObservations": {
+    "event": {
+      "id": "regional-louisville-2027",
+      "seasonInTitle": 2027,
+      "datesDisplayed": "October 10–11, 2026",
+      "game": "Pokémon Champions",
+      "regulation": "M-C",
+      "division": "Masters",
+      "participantsDisplayed": 1013,
+      "dayOneSheetsDisplayed": 1013,
+      "dayTwoSheetsDisplayed": 143,
+      "coverageSummaryTeamsDisplayed": 143,
+      "counterSemanticsVerifiedAgainstFiles": false
+    },
+    "championSheet": {
+      "pokemonCount": 6,
+      "publishedFieldsObserved": ["species", "item", "ability", "nature", "moves"],
+      "spObserved": false,
+      "evObserved": false,
+      "ivObserved": false,
+      "showdownStylePasteObserved": true,
+      "megaPresentation": {
+        "sheetSpecies": "Mega Charizard Y",
+        "sheetAbilityText": "Blaze | Drought",
+        "pasteSpecies": "Charizard",
+        "pasteItem": "Charizardite Y",
+        "pasteAbility": "Blaze"
+      }
+    },
+    "combinationSearch": {
+      "pokemon": ["incineroar", "gengar-mega"],
+      "incineroarNature": "Careful",
+      "regulation": "M-C",
+      "division": "Masters",
+      "teamsDisplayed": 23,
+      "tournamentsDisplayed": 5,
+      "actualLeadFrequency": null
+    },
+    "tournamentRun": {
+      "opponentsByRoundObserved": true,
+      "opponentTeamSheetButtonsObserved": true,
+      "actualLeadsObserved": false,
+      "turnOneActionsObserved": false
+    }
+  },
+  "documentedAccess": {
+    "reference": "https://vgchistory.com/data",
+    "staticFiles": [
+      "/sheets/<tournament-id>.json",
+      "/standings/<tournament-id>.json",
+      "/matches/<tournament-id>.json",
+      "/stats/pokemon/<slug>.json",
+      "/stats/items/<slug>.json",
+      "/stats/moves/<slug>.json",
+      "/stats/players/<slug>.json",
+      "/data.js",
+      "/sitemap.xml"
+    ],
+    "projectUseOfferedByProvider": true,
+    "cacheRequested": true,
+    "creditWithLinkRequested": true,
+    "gameAssetRightsGranted": false,
+    "actualFilesProbed": false,
+    "playerSchemaVersionDocumented": 2,
+    "matchGranularityDocumented": "match_result_not_game_by_game_bo3_scores"
+  },
+  "pending": [
+    "Fetch a small cached sample and pin checksums.",
+    "Verify field schemas and join keys before relating sheets, standings and matches.",
+    "Reconcile coverage counter meanings and preserve the scope of standings snapshots.",
+    "Normalize base forms and mega transformations against the existing candidate catalogue.",
+    "Preserve missing SP as unknown and validate published fields.",
+    "Do not infer observed leads or recommendation win probabilities from roster co-occurrence or tournament results."
+  ],
+  "trainingReady": false
+}

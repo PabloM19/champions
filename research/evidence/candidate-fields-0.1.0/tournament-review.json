@@ -1,0 +1,472 @@
+{
+  "schemaVersion": 1,
+  "validatorVersion": "candidate-fields-0.1.0",
+  "source": {
+    "eventId": "6acfe5ff8a8383117e3ebdde",
+    "name": "Chaos League Sunday Slam #117",
+    "date": "2026-10-18T21:00:00.000Z",
+    "format": "M-C",
+    "platform": "SWITCH",
+    "url": "https://play.limitlesstcg.com/api/tournaments/6acfe5ff8a8383117e3ebdde/standings",
+    "sha256": "6a606c04eb226586ca89c43793cb40b5edc0038de9ee076a6dd7b6fd8a643776"
+  },
+  "versions": {
+    "catalog": "m-c-2026-10-19.1",
+    "corpus": "m-c-2026-10-19.corpus.1"
+  },
+  "totalTeamlists": 42,
+  "totals": {
+    "incomplete_candidate": 42
+  },
+  "unknownCounts": {
+    "missing_sp": 252,
+    "provider_form_requires_confirmation": 3,
+    "ability_stage_requires_confirmation": 1
+  },
+  "conflictCounts": {},
+  "warningCounts": {
+    "legacy_tera_field_not_enabled": 5
+  },
+  "rows": [
+    {
+      "sourceRowIndex": 0,
+      "status": "incomplete_candidate",
+      "memberCount": 6,
+      "membersWithoutSp": 6,
+      "unresolvedForms": [
+        {
+          "memberIndex": 4,
+          "candidateFormIds": [
+            "pokemon-form:0666-018"
+          ]
+        }
+      ],
+      "conflicts": [],
+      "warnings": []
+    },
+    {
+      "sourceRowIndex": 1,
+      "status": "incomplete_candidate",
+      "memberCount": 6,
+      "membersWithoutSp": 6,
+      "unresolvedForms": [],
+      "conflicts": [],
+      "warnings": []
+    },
+    {
+      "sourceRowIndex": 2,
+      "status": "incomplete_candidate",
+      "memberCount": 6,
+      "membersWithoutSp": 6,
+      "unresolvedForms": [],
+      "conflicts": [],
+      "warnings": []
+    },
+    {
+      "sourceRowIndex": 3,
+      "status": "incomplete_candidate",
+      "memberCount": 6,
+      "membersWithoutSp": 6,
+      "unresolvedForms": [],
+      "conflicts": [],
+      "warnings": []
+    },
+    {
+      "sourceRowIndex": 4,
+      "status": "incomplete_candidate",
+      "memberCount": 6,
+      "membersWithoutSp": 6,
+      "unresolvedForms": [],
+      "conflicts": [],
+      "warnings": []
+    },
+    {
+      "sourceRowIndex": 5,
+      "status": "incomplete_candidate",
+      "memberCount": 6,
+      "membersWithoutSp": 6,
+      "unresolvedForms": [
+        {
+          "memberIndex": 5,
+          "candidateFormIds": [
+            "pokemon-form:0670-005"
+          ]
+        }
+      ],
+      "conflicts": [],
+      "warnings": []
+    },
+    {
+      "sourceRowIndex": 6,
+      "status": "incomplete_candidate",
+      "memberCount": 6,
+      "membersWithoutSp": 6,
+      "unresolvedForms": [],
+      "conflicts": [],
+      "warnings": []
+    },
+    {
+      "sourceRowIndex": 7,
+      "status": "incomplete_candidate",
+      "memberCount": 6,
+      "membersWithoutSp": 6,
+      "unresolvedForms": [],
+      "conflicts": [],
+      "warnings": []
+    },
+    {
+      "sourceRowIndex": 8,
+      "status": "incomplete_candidate",
+      "memberCount": 6,
+      "membersWithoutSp": 6,
+      "unresolvedForms": [],
+      "conflicts": [],
+      "warnings": []
+    },
+    {
+      "sourceRowIndex": 9,
+      "status": "incomplete_candidate",
+      "memberCount": 6,
+      "membersWithoutSp": 6,
+      "unresolvedForms": [],
+      "conflicts": [],
+      "warnings": []
+    },
+    {
+      "sourceRowIndex": 10,
+      "status": "incomplete_candidate",
+      "memberCount": 6,
+      "membersWithoutSp": 6,
+      "unresolvedForms": [],
+      "conflicts": [],
+      "warnings": []
+    },
+    {
+      "sourceRowIndex": 11,
+      "status": "incomplete_candidate",
+      "memberCount": 6,
+      "membersWithoutSp": 6,
+      "unresolvedForms": [],
+      "conflicts": [],
+      "warnings": []
+    },
+    {
+      "sourceRowIndex": 12,
+      "status": "incomplete_candidate",
+      "memberCount": 6,
+      "membersWithoutSp": 6,
+      "unresolvedForms": [],
+      "conflicts": [],
+      "warnings": []
+    },
+    {
+      "sourceRowIndex": 13,
+      "status": "incomplete_candidate",
+      "memberCount": 6,
+      "membersWithoutSp": 6,
+      "unresolvedForms": [],
+      "conflicts": [],
+      "warnings": []
+    },
+    {
+      "sourceRowIndex": 14,
+      "status": "incomplete_candidate",
+      "memberCount": 6,
+      "membersWithoutSp": 6,
+      "unresolvedForms": [],
+      "conflicts": [],
+      "warnings": []
+    },
+    {
+      "sourceRowIndex": 15,
+      "status": "incomplete_candidate",
+      "memberCount": 6,
+      "membersWithoutSp": 6,
+      "unresolvedForms": [],
+      "conflicts": [],
+      "warnings": []
+    },
+    {
+      "sourceRowIndex": 16,
+      "status": "incomplete_candidate",
+      "memberCount": 6,
+      "membersWithoutSp": 6,
+      "unresolvedForms": [],
+      "conflicts": [],
+      "warnings": []
+    },
+    {
+      "sourceRowIndex": 17,
+      "status": "incomplete_candidate",
+      "memberCount": 6,
+      "membersWithoutSp": 6,
+      "unresolvedForms": [],
+      "conflicts": [],
+      "warnings": []
+    },
+    {
+      "sourceRowIndex": 18,
+      "status": "incomplete_candidate",
+      "memberCount": 6,
+      "membersWithoutSp": 6,
+      "unresolvedForms": [],
+      "conflicts": [],
+      "warnings": []
+    },
+    {
+      "sourceRowIndex": 19,
+      "status": "incomplete_candidate",
+      "memberCount": 6,
+      "membersWithoutSp": 6,
+      "unresolvedForms": [],
+      "conflicts": [],
+      "warnings": []
+    },
+    {
+      "sourceRowIndex": 20,
+      "status": "incomplete_candidate",
+      "memberCount": 6,
+      "membersWithoutSp": 6,
+      "unresolvedForms": [],
+      "conflicts": [],
+      "warnings": []
+    },
+    {
+      "sourceRowIndex": 21,
+      "status": "incomplete_candidate",
+      "memberCount": 6,
+      "membersWithoutSp": 6,
+      "unresolvedForms": [],
+      "conflicts": [],
+      "warnings": []
+    },
+    {
+      "sourceRowIndex": 22,
+      "status": "incomplete_candidate",
+      "memberCount": 6,
+      "membersWithoutSp": 6,
+      "unresolvedForms": [],
+      "conflicts": [],
+      "warnings": []
+    },
+    {
+      "sourceRowIndex": 23,
+      "status": "incomplete_candidate",
+      "memberCount": 6,
+      "membersWithoutSp": 6,
+      "unresolvedForms": [],
+      "conflicts": [],
+      "warnings": []
+    },
+    {
+      "sourceRowIndex": 24,
+      "status": "incomplete_candidate",
+      "memberCount": 6,
+      "membersWithoutSp": 6,
+      "unresolvedForms": [],
+      "conflicts": [],
+      "warnings": []
+    },
+    {
+      "sourceRowIndex": 25,
+      "status": "incomplete_candidate",
+      "memberCount": 6,
+      "membersWithoutSp": 6,
+      "unresolvedForms": [],
+      "conflicts": [],
+      "warnings": []
+    },
+    {
+      "sourceRowIndex": 26,
+      "status": "incomplete_candidate",
+      "memberCount": 6,
+      "membersWithoutSp": 6,
+      "unresolvedForms": [],
+      "conflicts": [],
+      "warnings": [
+        {
+          "kind": "warning",
+          "code": "legacy_tera_field_not_enabled",
+          "memberIndex": 0,
+          "field": "tera",
+          "sourceId": "input_schema"
+        },
+        {
+          "kind": "warning",
+          "code": "legacy_tera_field_not_enabled",
+          "memberIndex": 1,
+          "field": "tera",
+          "sourceId": "input_schema"
+        },
+        {
+          "kind": "warning",
+          "code": "legacy_tera_field_not_enabled",
+          "memberIndex": 2,
+          "field": "tera",
+          "sourceId": "input_schema"
+        },
+        {
+          "kind": "warning",
+          "code": "legacy_tera_field_not_enabled",
+          "memberIndex": 3,
+          "field": "tera",
+          "sourceId": "input_schema"
+        }
+      ]
+    },
+    {
+      "sourceRowIndex": 27,
+      "status": "incomplete_candidate",
+      "memberCount": 6,
+      "membersWithoutSp": 6,
+      "unresolvedForms": [],
+      "conflicts": [],
+      "warnings": [
+        {
+          "kind": "warning",
+          "code": "legacy_tera_field_not_enabled",
+          "memberIndex": 2,
+          "field": "tera",
+          "sourceId": "input_schema"
+        }
+      ]
+    },
+    {
+      "sourceRowIndex": 28,
+      "status": "incomplete_candidate",
+      "memberCount": 6,
+      "membersWithoutSp": 6,
+      "unresolvedForms": [
+        {
+          "memberIndex": 3,
+          "candidateFormIds": [
+            "pokemon-form:0666-018"
+          ]
+        }
+      ],
+      "conflicts": [],
+      "warnings": []
+    },
+    {
+      "sourceRowIndex": 29,
+      "status": "incomplete_candidate",
+      "memberCount": 6,
+      "membersWithoutSp": 6,
+      "unresolvedForms": [],
+      "conflicts": [],
+      "warnings": []
+    },
+    {
+      "sourceRowIndex": 30,
+      "status": "incomplete_candidate",
+      "memberCount": 6,
+      "membersWithoutSp": 6,
+      "unresolvedForms": [],
+      "conflicts": [],
+      "warnings": []
+    },
+    {
+      "sourceRowIndex": 31,
+      "status": "incomplete_candidate",
+      "memberCount": 6,
+      "membersWithoutSp": 6,
+      "unresolvedForms": [],
+      "conflicts": [],
+      "warnings": []
+    },
+    {
+      "sourceRowIndex": 32,
+      "status": "incomplete_candidate",
+      "memberCount": 6,
+      "membersWithoutSp": 6,
+      "unresolvedForms": [],
+      "conflicts": [],
+      "warnings": []
+    },
+    {
+      "sourceRowIndex": 33,
+      "status": "incomplete_candidate",
+      "memberCount": 6,
+      "membersWithoutSp": 6,
+      "unresolvedForms": [],
+      "conflicts": [],
+      "warnings": []
+    },
+    {
+      "sourceRowIndex": 34,
+      "status": "incomplete_candidate",
+      "memberCount": 6,
+      "membersWithoutSp": 6,
+      "unresolvedForms": [],
+      "conflicts": [],
+      "warnings": []
+    },
+    {
+      "sourceRowIndex": 35,
+      "status": "incomplete_candidate",
+      "memberCount": 6,
+      "membersWithoutSp": 6,
+      "unresolvedForms": [],
+      "conflicts": [],
+      "warnings": []
+    },
+    {
+      "sourceRowIndex": 36,
+      "status": "incomplete_candidate",
+      "memberCount": 6,
+      "membersWithoutSp": 6,
+      "unresolvedForms": [],
+      "conflicts": [],
+      "warnings": []
+    },
+    {
+      "sourceRowIndex": 37,
+      "status": "incomplete_candidate",
+      "memberCount": 6,
+      "membersWithoutSp": 6,
+      "unresolvedForms": [],
+      "conflicts": [],
+      "warnings": []
+    },
+    {
+      "sourceRowIndex": 38,
+      "status": "incomplete_candidate",
+      "memberCount": 6,
+      "membersWithoutSp": 6,
+      "unresolvedForms": [],
+      "conflicts": [],
+      "warnings": []
+    },
+    {
+      "sourceRowIndex": 39,
+      "status": "incomplete_candidate",
+      "memberCount": 6,
+      "membersWithoutSp": 6,
+      "unresolvedForms": [],
+      "conflicts": [],
+      "warnings": []
+    },
+    {
+      "sourceRowIndex": 40,
+      "status": "incomplete_candidate",
+      "memberCount": 6,
+      "membersWithoutSp": 6,
+      "unresolvedForms": [],
+      "conflicts": [],
+      "warnings": []
+    },
+    {
+      "sourceRowIndex": 41,
+      "status": "incomplete_candidate",
+      "memberCount": 6,
+      "membersWithoutSp": 6,
+      "unresolvedForms": [],
+      "conflicts": [],
+      "warnings": []
+    }
+  ],
+  "playerNamesPublished": false,
+  "rawSetsPublished": false,
+  "trainingReady": false,
+  "interpretation": "Read-only review of a cached source sample; this is not an approved training bank."
+}

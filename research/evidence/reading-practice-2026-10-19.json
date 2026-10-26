@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-19",
+  "practiceVersion": "reading-practice-0.1.0",
+  "libraryVersion": "3598251b1e2ba41f90a9455a96f3955af1c0603f510cbd1e1d21b4a5f14b1495",
+  "catalogVersion": "m-c-2026-10-19.1",
+  "corpusVersion": "m-c-2026-10-19.corpus.1",
+  "scope": "Reading practice only; not competitive assessment.",
+  "inputTeams": 1561,
+  "eligiblePools": {
+    "easy": {
+      "real": 456,
+      "synthetic": 1
+    },
+    "medium": {
+      "real": 302,
+      "synthetic": 1
+    },
+    "hard": {
+      "real": 743,
+      "synthetic": 0
+    }
+  },
+  "syntheticTemplates": [
+    {
+      "id": "synthetic:sun-tr:1",
+      "fieldConflicts": 0
+    },
+    {
+      "id": "synthetic:rain:1",
+      "fieldConflicts": 0
+    }
+  ],
+  "sample": {
+    "sourceKind": "real",
+    "previewMembers": 6,
+    "previewFields": [
+      "index",
+      "species"
+    ],
+    "mechanicalAssessmentReady": false
+  },
+  "personalDataAndRawSetsIncluded": false
+}

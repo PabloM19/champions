@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "corpusVersion": "m-c-2026-10-19.corpus.1",
+  "reviewedOn": "2026-10-19",
+  "catalogPath": "data/catalog/m-c-2026-10-19.1/catalog.json",
+  "catalogSha256": "01fc28d8d3ea59ae01c5ebc8054c67cd425ab80189df61edff0960c54712962e",
+  "officialPatch": {
+    "id": "champions-2026-09-09",
+    "url": "https://news.pokemon-home.com/en/page/817.html",
+    "removedLearnsetEntries": [
+      {
+        "species": "politoed",
+        "move": "pound"
+      },
+      {
+        "species": "archaludon",
+        "move": "mirrorcoat"
+      },
+      {
+        "species": "archaludon",
+        "move": "metalburst"
+      }
+    ],
+    "availableMoves": [
+      "slash"
+    ],
+    "effectivePP": {
+      "wish": 8,
+      "strengthsap": 8
+    }
+  }
+}

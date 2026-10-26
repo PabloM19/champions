@@ -1,0 +1,193 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-19T09:33:44.649092+00:00",
+  "probes": [
+    {
+      "id": "official-eligibility",
+      "url": "https://web-view.app.pokemonchampions.jp/battle/pages/events/rs178713870219xeaaio/en/pokemon.html",
+      "status": "readable",
+      "cachedAt": "2026-10-19T09:30:05.715948+00:00",
+      "bytes": 8557,
+      "sha256": "122529cebbc15cd2a22c781e0fb43ca814be86a18951f1ceaf37cf65297a3627"
+    },
+    {
+      "id": "limitless-games",
+      "url": "https://play.limitlesstcg.com/api/games",
+      "status": "readable",
+      "cachedAt": "2026-10-19T09:29:34.288931+00:00",
+      "bytes": 3645,
+      "sha256": "e99b6fdb0ac711251e19744596f00b083ec18ab6838d0f6e4cc0c984e342967f"
+    },
+    {
+      "id": "limitless-tournaments",
+      "url": "https://play.limitlesstcg.com/api/tournaments?game=VGC&format=M-C&limit=3",
+      "status": "readable",
+      "cachedAt": "2026-10-19T09:30:23.063818+00:00",
+      "bytes": 542,
+      "sha256": "a4b3ee6ff208d82c645df208f09f53fceb78e43364c4255bf819188f3b4c5090"
+    },
+    {
+      "id": "limitless-details",
+      "url": "https://play.limitlesstcg.com/api/tournaments/6acfe5ff8a8383117e3ebdde/details",
+      "status": "readable",
+      "cachedAt": "2026-10-19T09:31:28.900050+00:00",
+      "bytes": 384,
+      "sha256": "73d966502e132f4f0dd72acafe23a6965eaaab3911082187502716193e943092"
+    },
+    {
+      "id": "limitless-standings",
+      "url": "https://play.limitlesstcg.com/api/tournaments/6acfe5ff8a8383117e3ebdde/standings",
+      "status": "readable",
+      "cachedAt": "2026-10-19T09:31:30.784673+00:00",
+      "bytes": 50091,
+      "sha256": "6a606c04eb226586ca89c43793cb40b5edc0038de9ee076a6dd7b6fd8a643776"
+    },
+    {
+      "id": "pokeapi-version-groups",
+      "url": "https://pokeapi.co/api/v2/version-group/?limit=100",
+      "status": "readable",
+      "cachedAt": "2026-10-19T09:30:04.093199+00:00",
+      "bytes": 2513,
+      "sha256": "71a9a4b9880d0f4c8aacf3197a5db8186cb410def69a93604ae65a6b83a4a424"
+    },
+    {
+      "id": "pokeapi-garchomp",
+      "url": "https://pokeapi.co/api/v2/pokemon/garchomp",
+      "status": "readable",
+      "cachedAt": "2026-10-19T09:31:28.456428+00:00",
+      "bytes": 229622,
+      "sha256": "ee78ec6f7eeff14bded0fd22074ca770d1e6aa5d5d646e28421f3bee0c333f0f"
+    },
+    {
+      "id": "champions-garchomp",
+      "url": "https://championsbattledata.com/api/pokemon/garchomp?format=Doubles",
+      "status": "readable",
+      "cachedAt": "2026-10-19T09:30:05.224533+00:00",
+      "bytes": 1178478,
+      "sha256": "a3e398a379e518b2b8ecc7d3f1e79d702d1136efa12ca7966c8cd49218ba432b"
+    }
+  ],
+  "findings": {
+    "officialEligibility": {
+      "entryCount": 262,
+      "uniqueOfficialIds": 262,
+      "uniqueNationalDexNumbers": 231,
+      "scope": "Published entries, not a complete catalogue of battle transformations.",
+      "mappingExamples": [
+        {
+          "officialId": "0666-018",
+          "label": "Vivillon"
+        },
+        {
+          "officialId": "0670-005",
+          "label": "Floette"
+        },
+        {
+          "officialId": "0925-001",
+          "label": "Maushold"
+        },
+        {
+          "officialId": "0931-000",
+          "label": "Squawkabilly"
+        },
+        {
+          "officialId": "0931-002",
+          "label": "Squawkabilly"
+        }
+      ]
+    },
+    "limitlessFormats": {
+      "game": "VGC",
+      "mCLabel": "Regulation Set M-C",
+      "platforms": {
+        "SWITCH": "Nintendo Switch",
+        "SIM": "Simulator"
+      }
+    },
+    "tournamentDiscovery": {
+      "limit": 3,
+      "events": [
+        {
+          "id": "6aba1756880ed327106de55f",
+          "name": "Sketch Academy Sunday Regulation M-C Tournament",
+          "date": "2026-10-19T01:00:00.000Z",
+          "format": "M-C",
+          "players": 61
+        },
+        {
+          "id": "6acfe5ff8a8383117e3ebdde",
+          "name": "Chaos League Sunday Slam #117",
+          "date": "2026-10-18T21:00:00.000Z",
+          "format": "M-C",
+          "players": 42
+        },
+        {
+          "id": "6a39d9b5c87cd9ff0a30d8a7",
+          "name": "Xperience Play — MH Expo Pokemon Champions $500#1",
+          "date": "2026-10-18T17:00:00.000Z",
+          "format": "M-C",
+          "players": 24
+        }
+      ],
+      "scope": "Discovery sample; not a metagame frequency estimate."
+    },
+    "teamlistCoverage": {
+      "eventId": "6acfe5ff8a8383117e3ebdde",
+      "eventName": "Chaos League Sunday Slam #117",
+      "eventDate": "2026-10-18T21:00:00.000Z",
+      "format": "M-C",
+      "platform": "SWITCH",
+      "isPublic": true,
+      "rows": 42,
+      "rowsWithTeamlist": 42,
+      "teamSizeCounts": {
+        "6": 42
+      },
+      "memberFieldNames": [
+        "ability",
+        "attacks",
+        "id",
+        "item",
+        "name",
+        "nature",
+        "tera"
+      ],
+      "membersWithSpOrEvFields": 0,
+      "scope": "Field coverage only. No player names or raw teamlists redistributed; legality not yet validated."
+    },
+    "pokeapiChampionsGroup": {
+      "present": true,
+      "paginationComplete": true
+    },
+    "pokeapiGarchomp": {
+      "baseStats": {
+        "hp": 108,
+        "attack": 130,
+        "defense": 95,
+        "special-attack": 80,
+        "special-defense": 85,
+        "speed": 102
+      },
+      "movesWithChampionsVersionGroup": 58,
+      "scope": "Community data coverage; not official M-C legality."
+    },
+    "battleDataSemantics": {
+      "showdownId": "garchomp",
+      "format": "Doubles",
+      "requestedSeason": "Current",
+      "summaryBaseStatsHp": 183,
+      "summaryPrimaryHp": 183,
+      "summaryPrimaryBaseStatTotal": 775,
+      "battleSummaryCategories": [
+        "ability",
+        "held_item",
+        "move",
+        "stat_alignment",
+        "stat_points",
+        "teammate"
+      ],
+      "scope": "baseStats fields need an explicit mapping. Aggregates do not establish a joint set or a real team."
+    }
+  },
+  "rawResponsesPublished": false
+}

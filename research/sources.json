@@ -1,0 +1,394 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-19",
+  "scope": "Initial source audit; not a production dataset or an assertion of full gameplay correctness.",
+  "sources": [
+    {
+      "id": "official-m-c",
+      "publisher": "The Pokémon Company",
+      "category": "official_regulation",
+      "urls": [
+        "https://champions-news.pokemon-home.com/en/page/816.html"
+      ],
+      "verification": "document_read",
+      "authorityFor": [
+        "regulation_period",
+        "published_mega_rule",
+        "duplicate_item_rule"
+      ],
+      "notAuthorityFor": [
+        "complete_learnsets",
+        "complete_item_catalogue",
+        "damage_formula"
+      ],
+      "effectiveFrom": "2026-09-09T02:00:00Z",
+      "effectiveUntil": "2026-12-02T01:59:00Z",
+      "decision": "Use as regulation reference; retain source and retrieval date.",
+      "assetRights": "No reusable image licence established."
+    },
+    {
+      "id": "official-m-c-eligibility",
+      "publisher": "The Pokémon Company",
+      "category": "official_eligibility",
+      "urls": [
+        "https://web-view.app.pokemonchampions.jp/battle/pages/events/rs178713870219xeaaio/en/pokemon.html"
+      ],
+      "verification": "html_array_counted_and_page_visually_checked",
+      "authorityFor": [
+        "published_eligible_species_and_form_entries"
+      ],
+      "notAuthorityFor": [
+        "all_battle_transformations",
+        "learnsets"
+      ],
+      "observations": {
+        "entries": 262,
+        "nationalDexNumbers": 231,
+        "sha256": "122529cebbc15cd2a22c781e0fb43ca814be86a18951f1ceaf37cf65297a3627",
+        "mappedEntries": 262
+      },
+      "decision": "Use factual IDs as candidate catalogue input with attribution; resolve form mapping and transformations before runtime.",
+      "assetRights": "Sprites not downloaded or granted by this audit.",
+      "evidence": "research/evidence/source-probes-2026-10-19.json",
+      "catalogEvidence": "data/catalog/m-c-2026-10-19.1/report.json"
+    },
+    {
+      "id": "official-patches",
+      "publisher": "The Pokémon Company",
+      "category": "official_release_notes",
+      "urls": [
+        "https://news.pokemon-home.com/en/page/817.html",
+        "https://champions-news.pokemon-home.com/en/page/844.html"
+      ],
+      "verification": "documents_read",
+      "authorityFor": [
+        "changes_explicitly_described_in_these_notices"
+      ],
+      "decision": "Record September move/PP changes. October notice does not specify individual fixes; full patch coverage remains open.",
+      "conformanceEvidence": "data/corpus/m-c-2026-10-19.corpus.1/report.json"
+    },
+    {
+      "id": "limitless",
+      "publisher": "Limitless",
+      "category": "tournament_api",
+      "urls": [
+        "https://docs.limitlesstcg.com/developer",
+        "https://docs.limitlesstcg.com/developer/tournaments",
+        "https://docs.limitlesstcg.com/developer/games"
+      ],
+      "verification": "documentation_and_live_gets",
+      "authorityFor": [
+        "what_this_service_publishes"
+      ],
+      "notAuthorityFor": [
+        "official_legality",
+        "unpublished_sp",
+        "actual_leads",
+        "worldwide_metagame_frequency"
+      ],
+      "access": {
+        "authentication": "No key for probed endpoints.",
+        "rateLimit": "Read response headers; observed 50 requests / 300 seconds."
+      },
+      "reuse": {
+        "documentedApiUse": true,
+        "blanketRedistributionLicenseVerified": false,
+        "playerDataAndAssets": "Review scope before distributing."
+      },
+      "observations": {
+        "sampleEventId": "6acfe5ff8a8383117e3ebdde",
+        "sampleLists": 42,
+        "spPublishedInSample": false
+      },
+      "decision": "Candidate for controlled ingestion. Validate legality and preserve absent fields; public distribution conditions remain to be recorded.",
+      "evidence": "research/evidence/source-probes-2026-10-19.json",
+      "candidateFieldReview": {
+        "teamlists": 42,
+        "missingSp": 252,
+        "unresolvedForms": 3,
+        "abilityStageClarifications": 1,
+        "trainingReady": false,
+        "evidence": "research/evidence/candidate-fields-0.1.0/tournament-review.json"
+      }
+    },
+    {
+      "id": "pokeapi",
+      "publisher": "PokéAPI contributors",
+      "category": "community_game_data_api",
+      "urls": [
+        "https://pokeapi.co/docs/v2",
+        "https://pokeapi.co/api/v2/version-group/?limit=100",
+        "https://pokeapi.co/api/v2/pokemon/garchomp"
+      ],
+      "verification": "documentation_and_live_gets",
+      "authorityFor": [
+        "provider_taxonomy_and_fields"
+      ],
+      "notAuthorityFor": [
+        "official_m_c_legality",
+        "complete_game_patch_coverage"
+      ],
+      "access": {
+        "authentication": "None",
+        "cacheRequired": true
+      },
+      "observations": {
+        "championsVersionGroupPresent": true,
+        "garchompMovesWithChampionsGroup": 58
+      },
+      "decision": "Use as candidate technical data with local cache and Champions-specific checks.",
+      "assetRights": "API access is not a blanket licence for Pokémon sprites or marks.",
+      "evidence": "research/evidence/source-probes-2026-10-19.json"
+    },
+    {
+      "id": "champions-battle-data",
+      "publisher": "Pokémon Champions Battle Data",
+      "category": "unofficial_aggregate_battle_data_api",
+      "urls": [
+        "https://championsbattledata.com/api_guide",
+        "https://championsbattledata.com/api-rules/",
+        "https://championsbattledata.com/api/pokemon/garchomp?format=Doubles",
+        "https://championsbattledata.com/api/battle/Doubles/garchomp"
+      ],
+      "verification": "provider_docs_rules_and_single_record_probe",
+      "authorityFor": [
+        "aggregates_reported_by_provider"
+      ],
+      "notAuthorityFor": [
+        "official_legality",
+        "joint_observed_sets",
+        "real_team_compositions",
+        "species_base_stats_without_mapping"
+      ],
+      "reuse": {
+        "personalProjectsAllowed": true,
+        "publicAttributionRequired": true,
+        "reasonableCacheAllowed": true,
+        "standaloneDataRedistributionAllowed": false,
+        "permanentMirrorAllowed": false
+      },
+      "attribution": {
+        "text": "Battle data provided by Pokémon Champions Battle Data",
+        "url": "https://championsbattledata.com/"
+      },
+      "observations": {
+        "summaryBaseStatsHpForGarchomp": 183,
+        "fieldSemantics": "Appears to contain calculated stats; do not load directly as species base stats."
+      },
+      "decision": "Integrated for on-demand speed references with attribution, temporary cache and explicit marginal-distribution semantics. Does not redistribute a dataset or infer joint observed builds.",
+      "assetRights": "Provider explicitly grants no Pokémon intellectual property rights.",
+      "evidence": "research/evidence/source-probes-2026-10-19.json",
+      "speedCalculatorIntegration": {
+        "reviewedOn": "2026-10-23",
+        "mode": "on_demand_species_reference",
+        "cacheHours": 6,
+        "requestTimeoutSeconds": 8,
+        "jointSetsPublished": false,
+        "review": "docs/desarrollo/velocidades.md"
+      }
+    },
+    {
+      "id": "smogon-calc",
+      "publisher": "Smogon damage-calc contributors",
+      "category": "calculation_library",
+      "urls": [
+        "https://github.com/smogon/damage-calc",
+        "https://registry.npmjs.org/@smogon/calc/0.12.0"
+      ],
+      "verification": "published_package_executed_in_isolated_research_subproject",
+      "package": {
+        "name": "@smogon/calc",
+        "version": "0.12.0",
+        "license": "MIT",
+        "integrity": "sha512-rNkdYV/ZGIugxD+hZlHdDaZLdGPYRIm+AaMFM18X2T2Pf8jpuuro9aoeiaZh51zcRR4tN3NRjSPoEXZ5ZDTuuA=="
+      },
+      "upstreamHeadObserved": "c1eb09be483f0bbf65132bf3703ee677195132f3",
+      "authorityFor": [
+        "published_library_behavior"
+      ],
+      "notAuthorityFor": [
+        "regulation_legality",
+        "strategic_lead_assessment",
+        "unverified_game_equivalence"
+      ],
+      "observations": {
+        "nativeChampionsMode": 0,
+        "checksPassed": 14,
+        "checksFailed": 0,
+        "spBoundsEnforced": false
+      },
+      "decision": "Provisional candidate; add adapter and validator, preserve MIT notice and verify game references.",
+      "evidence": "research/evidence/calc-0.12.0.json",
+      "catalogCrossCheck": {
+        "rosterForms": 262,
+        "battleForms": 89,
+        "abilityDefaultConflicts": [
+          "hawluchamega",
+          "skarmorymega"
+        ],
+        "evidence": "data/catalog/m-c-2026-10-19.1/report.json"
+      },
+      "moveCrossCheck": {
+        "differenceCount": 12,
+        "missingCandidateMoves": [
+          "pound"
+        ],
+        "evidence": "data/corpus/m-c-2026-10-19.corpus.1/report.json",
+        "interpretation": "Review in context; damage calculation is not action-order resolution."
+      }
+    },
+    {
+      "id": "pokemon-showdown-champions",
+      "publisher": "Pokémon Showdown contributors",
+      "category": "simulator_source",
+      "urls": [
+        "https://github.com/smogon/pokemon-showdown/tree/master/data/mods/champions",
+        "https://raw.githubusercontent.com/smogon/pokemon-showdown/master/data/mods/champions/scripts.ts",
+        "https://raw.githubusercontent.com/smogon/pokemon-showdown/master/LICENSE"
+      ],
+      "verification": "pinned_source_loaded_with_native_dex_and_catalogue_cross_checked",
+      "authorityFor": [
+        "this_simulator_implementation"
+      ],
+      "notAuthorityFor": [
+        "official_game_truth"
+      ],
+      "reuse": {
+        "license": "MIT",
+        "noticeRequired": true,
+        "gameAssetRightsGranted": false
+      },
+      "decision": "Pinned source used for candidate form mapping and technical data with MIT notice. Game validation, legality corpus and activation sequences remain pending.",
+      "commit": "7b02eb39878f4b486f658a752b38c161379bd352",
+      "archiveSha256": "2a0dac6a8f624bc74c8cddd3ef3a9a87cd6b92d07f3091cb6e22f799deda9cb8",
+      "evidence": "data/catalog/m-c-2026-10-19.1/report.json",
+      "corpusEvidence": "data/corpus/m-c-2026-10-19.corpus.1/report.json",
+      "corpusObservations": {
+        "moves": 515,
+        "abilities": 317,
+        "items": 166,
+        "learnsets": 262,
+        "effectImplementation": "reference_only",
+        "availabilityConflict": "auraguard"
+      }
+    },
+    {
+      "id": "pokemon-zone",
+      "publisher": "Pokémon Zone / Jedigg LLC",
+      "category": "editorial",
+      "urls": [
+        "https://www.pokemon-zone.com/terms/"
+      ],
+      "verification": "terms_section_11_read",
+      "automatedIngestionAllowed": false,
+      "decision": "Exclude automated extraction under the inspected terms; do not scrape competitive data."
+    },
+    {
+      "id": "stat-point-community-reference",
+      "publisher": "Bulbapedia contributors",
+      "category": "secondary_reference",
+      "urls": [
+        "https://bulbapedia.bulbagarden.net/wiki/Stat_point"
+      ],
+      "verification": "reference_in_baseline_reviewed",
+      "authorityFor": [],
+      "decision": "Background reference only for this audit. SP formula and conversion require primary implementation checks and in-game reference cases."
+    },
+    {
+      "id": "vgc-history",
+      "publisher": "Sean / Tazzik LLC",
+      "category": "community_tournament_archive",
+      "urls": [
+        "https://vgchistory.com/data",
+        "https://vgchistory.com/about",
+        "https://vgchistory.com/coverage",
+        "https://vgchistory.com/tournaments/regional-louisville-2027"
+      ],
+      "verification": "interactive_browser_review_followed_by_static_file_probe_and_live_local_updater",
+      "authorityFor": [
+        "what_this_archive_publishes"
+      ],
+      "notAuthorityFor": [
+        "official_legality",
+        "unpublished_sp",
+        "actual_leads",
+        "turn_one_actions",
+        "recommendation_win_probability"
+      ],
+      "access": {
+        "documentedStaticDataFiles": true,
+        "dataFileProbePerformed": true,
+        "cacheRequested": true
+      },
+      "reuse": {
+        "projectUseOfferedOnDataPage": true,
+        "creditWithLinkRequested": true,
+        "gameAssetRightsGranted": false
+      },
+      "observations": {
+        "mCEventsDisplayedInFilteredSearch": 5,
+        "sampleEventId": "regional-louisville-2027",
+        "championPasteObserved": true,
+        "spObservedInChampionPaste": false,
+        "roundOpponentsAndTeamSheetLinksObserved": true
+      },
+      "decision": "Integrated into the local manual library updater for the latest three published final verified M-C Masters events. Schemas and roster joins checked, incomplete sheets quarantined, candidate conflicts retained. App 0.2 uses resolvable cases without field conflicts in explicitly limited reading practice; competitive mechanical assessment remains disabled. Missing statistics stay unknown. Match files are not yet ingested.",
+      "attribution": {
+        "text": "Tournament data: VGC History / Sean — Tazzik",
+        "url": "https://vgchistory.com/"
+      },
+      "evidence": "research/evidence/vgc-history-2026-10-19.json",
+      "liveUpdateEvidence": "research/evidence/vgc-history-live-2026-10-19.json",
+      "readingPracticeEvidence": "research/evidence/reading-practice-2026-10-19.json",
+      "review": "docs/auditoria/vgc-history.md"
+    },
+    {
+      "id": "pokeos",
+      "publisher": "Pokéos",
+      "category": "community_database_and_season_aggregates",
+      "urls": [
+        "https://www.pokeos.com/es/db/games/champions",
+        "https://www.pokeos.com/news/1931/POK%C3%89MON%2BCHAMPIONS%2BQUICK%2BLINKS:",
+        "https://www.pokeos.com/es/champions/battle-data/season-m-6/double/torkoal",
+        "https://www.pokeos.com/es/movedex",
+        "https://www.pokeos.com/es/abilitydex",
+        "https://www.pokeos.com/es/itemdex"
+      ],
+      "verification": "public_web_pages_and_provider_resource_announcement_reviewed_interactive_browser_unavailable",
+      "authorityFor": [
+        "what_this_site_publishes"
+      ],
+      "notAuthorityFor": [
+        "official_legality",
+        "unpublished_tournament_sp",
+        "joint_observed_sets",
+        "actual_leads",
+        "recommendation_win_probability"
+      ],
+      "observations": {
+        "providerAnnouncesChampionsLearnsets": true,
+        "providerAnnouncesMoveChanges": true,
+        "seasonSpecificDoubleBattlePageRead": true,
+        "trainingSpreadSuggestionsPotential": true,
+        "learnsetProvenanceAsStatedByProvider": "RoiDadadou compilation based on Serebii datamines",
+        "machineReadableDatasetVerified": false,
+        "sampleSizeAndAggregateMethodologyVerified": false
+      },
+      "reuse": {
+        "publicApiDocumentationVerified": false,
+        "automatedReuseConditionsVerified": false,
+        "gameAssetRightsGranted": false
+      },
+      "decision": "Reference for Champions data cross-checks and possible confirmed SP suggestions. No automated ingestion or asset reuse enabled by this review.",
+      "review": "docs/auditoria/pokeos.md"
+    },
+    {
+      "id": "play-pokemon-rk9",
+      "publisher": "Play! Pokémon / RK9",
+      "category": "candidate_tournament_material",
+      "urls": [],
+      "verification": "not_audited",
+      "decision": "Future investigation; no API coverage or redistribution permission assumed."
+    }
+  ]
+}

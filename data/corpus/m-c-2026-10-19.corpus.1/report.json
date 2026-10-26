@@ -1,0 +1,193 @@
+{
+  "schemaVersion": 1,
+  "corpusVersion": "m-c-2026-10-19.corpus.1",
+  "status": "candidate_generated",
+  "moves": 515,
+  "movesReachableFromRoster": 510,
+  "abilities": 317,
+  "items": 166,
+  "natures": 25,
+  "learnsets": 262,
+  "learnsetMemberships": 15987,
+  "effectRecords": 998,
+  "handlerReferences": 1228,
+  "patchChecks": [
+    {
+      "kind": "removed_learnset_move",
+      "species": "politoed",
+      "move": "pound",
+      "passed": true
+    },
+    {
+      "kind": "removed_learnset_move",
+      "species": "archaludon",
+      "move": "mirrorcoat",
+      "passed": true
+    },
+    {
+      "kind": "removed_learnset_move",
+      "species": "archaludon",
+      "move": "metalburst",
+      "passed": true
+    },
+    {
+      "kind": "available_move",
+      "moveId": "slash",
+      "passed": true
+    },
+    {
+      "kind": "effective_pp",
+      "moveId": "wish",
+      "expectedPP": 8,
+      "observedPP": 8,
+      "passed": true
+    },
+    {
+      "kind": "effective_pp",
+      "moveId": "strengthsap",
+      "expectedPP": 8,
+      "observedPP": 8,
+      "passed": true
+    }
+  ],
+  "calculatorDifferences": [
+    {
+      "moveId": "avalanche",
+      "fields": {
+        "priority": {
+          "showdown": -4,
+          "calculator": 0
+        }
+      },
+      "interpretation": "Implementation difference; requires review in context, not an automatic gameplay verdict."
+    },
+    {
+      "moveId": "beakblast",
+      "fields": {
+        "priority": {
+          "showdown": -3,
+          "calculator": 0
+        }
+      },
+      "interpretation": "Implementation difference; requires review in context, not an automatic gameplay verdict."
+    },
+    {
+      "moveId": "circlethrow",
+      "fields": {
+        "priority": {
+          "showdown": -6,
+          "calculator": 0
+        }
+      },
+      "interpretation": "Implementation difference; requires review in context, not an automatic gameplay verdict."
+    },
+    {
+      "moveId": "counter",
+      "fields": {
+        "priority": {
+          "showdown": -5,
+          "calculator": 0
+        }
+      },
+      "interpretation": "Implementation difference; requires review in context, not an automatic gameplay verdict."
+    },
+    {
+      "moveId": "dragontail",
+      "fields": {
+        "priority": {
+          "showdown": -6,
+          "calculator": 0
+        }
+      },
+      "interpretation": "Implementation difference; requires review in context, not an automatic gameplay verdict."
+    },
+    {
+      "moveId": "focuspunch",
+      "fields": {
+        "priority": {
+          "showdown": -3,
+          "calculator": 0
+        }
+      },
+      "interpretation": "Implementation difference; requires review in context, not an automatic gameplay verdict."
+    },
+    {
+      "moveId": "growth",
+      "fields": {
+        "type": {
+          "showdown": "Grass",
+          "calculator": "Normal"
+        }
+      },
+      "interpretation": "Implementation difference; requires review in context, not an automatic gameplay verdict."
+    },
+    {
+      "moveId": "mirrorcoat",
+      "fields": {
+        "priority": {
+          "showdown": -5,
+          "calculator": 0
+        }
+      },
+      "interpretation": "Implementation difference; requires review in context, not an automatic gameplay verdict."
+    },
+    {
+      "moveId": "roar",
+      "fields": {
+        "priority": {
+          "showdown": -6,
+          "calculator": 0
+        }
+      },
+      "interpretation": "Implementation difference; requires review in context, not an automatic gameplay verdict."
+    },
+    {
+      "moveId": "struggle",
+      "fields": {
+        "type": {
+          "showdown": "Normal",
+          "calculator": "???"
+        }
+      },
+      "interpretation": "Implementation difference; requires review in context, not an automatic gameplay verdict."
+    },
+    {
+      "moveId": "trickroom",
+      "fields": {
+        "priority": {
+          "showdown": -7,
+          "calculator": 0
+        }
+      },
+      "interpretation": "Implementation difference; requires review in context, not an automatic gameplay verdict."
+    },
+    {
+      "moveId": "whirlwind",
+      "fields": {
+        "priority": {
+          "showdown": -6,
+          "calculator": 0
+        }
+      },
+      "interpretation": "Implementation difference; requires review in context, not an automatic gameplay verdict."
+    }
+  ],
+  "calculatorMissingMoves": [
+    "pound"
+  ],
+  "availabilityConflicts": [
+    {
+      "kind": "ability",
+      "id": "auraguard",
+      "upstreamFlag": "Future",
+      "referencedBy": [
+        "battle-form:lucariomegaz"
+      ],
+      "resolution": "unresolved_do_not_treat_as_available_or_unavailable_automatically"
+    }
+  ],
+  "errors": [],
+  "gameValidation": "pending",
+  "runtimeReady": false,
+  "corpusSha256": "44de1314a229868e8d742ed011a2217ad1e4914005f57d605535eb9f688611d6"
+}

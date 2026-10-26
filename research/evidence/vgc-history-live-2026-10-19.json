@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-19",
+  "method": "live_local_http_post_update",
+  "checkedAt": "2026-10-19T14:14:03.881Z",
+  "adapterVersion": "vgc-history-0.1.1",
+  "datasetVersion": "3598251b1e2ba41f90a9455a96f3955af1c0603f510cbd1e1d21b4a5f14b1495",
+  "catalogVersion": "m-c-2026-10-19.1",
+  "corpusVersion": "m-c-2026-10-19.corpus.1",
+  "scope": "latest_three_published_final_verified_M-C_Masters_events",
+  "files": [
+    {
+      "url": "https://vgchistory.com/data.js",
+      "sha256": "c6f871a412bb594444712bb1df56f43748df6d60ea98ecfbf65e5771882e46da",
+      "lastModified": "Fri, 16 Oct 2026 19:19:52 GMT"
+    },
+    {
+      "url": "https://vgchistory.com/sheets/regional-louisville-2027.json",
+      "sha256": "cd2c6be4f2cc2ec39ea402dc6fef22bf92ff657423a527d3f7c548600bb23b5f",
+      "lastModified": "Fri, 16 Oct 2026 19:17:56 GMT"
+    },
+    {
+      "url": "https://vgchistory.com/standings/regional-louisville-2027.json",
+      "sha256": "db1fcdf66bbbb30fd17c846b5fe4aefcd6909bd1d55402d408594ab02a03131e",
+      "lastModified": "Fri, 16 Oct 2026 19:17:56 GMT"
+    },
+    {
+      "url": "https://vgchistory.com/sheets/regional-recife-2027.json",
+      "sha256": "aca1cf5855f77102fb838ff347a3cf19cad30984b6e08f2c4390747eeeaa0531",
+      "lastModified": "Fri, 16 Oct 2026 19:17:56 GMT"
+    },
+    {
+      "url": "https://vgchistory.com/standings/regional-recife-2027.json",
+      "sha256": "d597f6ba882a0ac5cd2cd610e37936ed811d752aabe685d67a1ad13fead33b17",
+      "lastModified": "Fri, 16 Oct 2026 19:17:56 GMT"
+    },
+    {
+      "url": "https://vgchistory.com/sheets/regional-brisbane-2027.json",
+      "sha256": "1d964ca01f267506f57a9eb1f7be92f97863e0ae1f07d5264a3a4841aaff6897",
+      "lastModified": "Fri, 16 Oct 2026 19:17:56 GMT"
+    },
+    {
+      "url": "https://vgchistory.com/standings/regional-brisbane-2027.json",
+      "sha256": "ac618744f2d3e864846e7f89b0bf3f4048de4be181f4b96bfadc52bc70b13e7c",
+      "lastModified": "Fri, 16 Oct 2026 19:17:56 GMT"
+    }
+  ],
+  "warnings": [
+    "Brisbane Regionals 2027: 1 fichas incompletas o no reconocidas y 0 sin unión segura; se conservan fuera de la biblioteca."
+  ],
+  "tournaments": [
+    {
+      "id": "regional-louisville-2027",
+      "name": "Louisville Regionals 2027",
+      "dates": "October 10–11, 2026",
+      "sourceUrl": "https://vgchistory.com/tournaments/regional-louisville-2027",
+      "publishedSheets": 1013,
+      "joinedTeams": 1013,
+      "unjoined": 0,
+      "excludedSheets": 0,
+      "validationStatuses": {
+        "incomplete_candidate": 996,
+        "published_fields_conflict": 17
+      },
+      "issueCounts": {
+        "missing_sp": 6078,
+        "item_absent_or_unspecified": 4,
+        "provider_form_requires_confirmation": 15,
+        "species_not_in_official_roster": 7,
+        "move_not_in_champions_learnset": 9,
+        "ability_not_on_roster_form": 3,
+        "ability_stage_requires_confirmation": 4,
+        "move_slots_not_complete": 1
+      }
+    },
+    {
+      "id": "regional-recife-2027",
+      "name": "Recife Regionals 2027",
+      "dates": "October 3–4, 2026",
+      "sourceUrl": "https://vgchistory.com/tournaments/regional-recife-2027",
+      "publishedSheets": 222,
+      "joinedTeams": 222,
+      "unjoined": 0,
+      "excludedSheets": 0,
+      "validationStatuses": {
+        "incomplete_candidate": 216,
+        "published_fields_conflict": 6
+      },
+      "issueCounts": {
+        "missing_sp": 1332,
+        "provider_form_requires_confirmation": 5,
+        "species_not_in_official_roster": 3,
+        "item_absent_or_unspecified": 1,
+        "move_not_in_champions_learnset": 3,
+        "ability_stage_requires_confirmation": 1,
+        "move_slots_not_complete": 1
+      }
+    },
+    {
+      "id": "regional-brisbane-2027",
+      "name": "Brisbane Regionals 2027",
+      "dates": "September 26–27, 2026",
+      "sourceUrl": "https://vgchistory.com/tournaments/regional-brisbane-2027",
+      "publishedSheets": 327,
+      "joinedTeams": 326,
+      "unjoined": 0,
+      "excludedSheets": 1,
+      "validationStatuses": {
+        "incomplete_candidate": 323,
+        "published_fields_conflict": 3
+      },
+      "issueCounts": {
+        "missing_sp": 1956,
+        "provider_form_requires_confirmation": 15,
+        "species_not_in_official_roster": 1,
+        "move_not_in_champions_learnset": 2,
+        "move_slots_not_complete": 1,
+        "ability_stage_requires_confirmation": 1
+      }
+    }
+  ],
+  "totalTeams": 1561,
+  "trainingReady": false,
+  "personalNamesAndRawSetsIncluded": false
+}

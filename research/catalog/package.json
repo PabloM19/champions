@@ -1,0 +1,14 @@
+{
+  "name": "champions-hero-catalog-research",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Catálogo candidato M-C con fuentes fijadas y validación de correspondencias",
+  "scripts": {
+    "build": "node build.cjs",
+    "test": "node --test catalog.test.cjs"
+  },
+  "dependencies": {
+    "tsx": "4.23.15",
+    "@smogon/calc": "0.12.0"
+  }
+}

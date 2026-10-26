@@ -1,0 +1,219 @@
+{
+  "schemaVersion": 1,
+  "executedAt": "2026-10-19T09:32:16.314Z",
+  "package": {
+    "name": "@smogon/calc",
+    "version": "0.12.0",
+    "license": "MIT"
+  },
+  "nodeVersion": "v22.17.1",
+  "validationScope": "Published library API and candidate arithmetic; no independent in-game ground truth.",
+  "gameValidation": "pending",
+  "passed": 14,
+  "failed": 0,
+  "checks": [
+    {
+      "id": "C01",
+      "description": "Modo Champions disponible como generación 0",
+      "status": "passed",
+      "observed": 0
+    },
+    {
+      "id": "C02",
+      "description": "Garchomp neutral sin SP coincide con aritmética candidata",
+      "status": "passed",
+      "observed": {
+        "hp": 183,
+        "atk": 150,
+        "def": 115,
+        "spa": 100,
+        "spd": 105,
+        "spe": 122
+      }
+    },
+    {
+      "id": "C03",
+      "description": "Reparto de 66 SP y naturaleza Jolly",
+      "status": "passed",
+      "observed": {
+        "hp": 185,
+        "atk": 182,
+        "def": 115,
+        "spa": 90,
+        "spd": 105,
+        "spe": 169
+      }
+    },
+    {
+      "id": "C04",
+      "description": "Un SP aumenta los PS de 183 a 184",
+      "status": "passed",
+      "observed": 184
+    },
+    {
+      "id": "C05",
+      "description": "Naturaleza Adamant con 32 SP en ataque",
+      "status": "passed",
+      "observed": 200
+    },
+    {
+      "id": "C06",
+      "description": "El modo Champions fija nivel 50 e ignora IVs proporcionados",
+      "status": "passed",
+      "observed": {
+        "level": 50,
+        "hp": 183,
+        "attack": 150
+      }
+    },
+    {
+      "id": "C07",
+      "description": "Las seis megas citadas como novedades M-C están en el catálogo de la biblioteca",
+      "status": "passed",
+      "observed": [
+        {
+          "id": "absolmegaz",
+          "present": true
+        },
+        {
+          "id": "salamencemega",
+          "present": true
+        },
+        {
+          "id": "garchompmegaz",
+          "present": true
+        },
+        {
+          "id": "lucariomegaz",
+          "present": true
+        },
+        {
+          "id": "golisopodmega",
+          "present": true
+        },
+        {
+          "id": "baxcaliburmega",
+          "present": true
+        }
+      ]
+    },
+    {
+      "id": "C08",
+      "description": "Protección devuelve daño cero en el escenario proporcionado",
+      "status": "passed",
+      "observed": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "C09",
+      "description": "Inmunidad de tipo Volador frente a Terremoto",
+      "status": "passed",
+      "observed": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "C10",
+      "description": "Campo Psíquico bloquea Sorpresa contra un objetivo en tierra",
+      "status": "passed",
+      "observed": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "C11",
+      "description": "Armor Tail bloquea Sorpresa dirigida al propio Farigiraf",
+      "status": "passed",
+      "observed": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "C12",
+      "description": "El cálculo diferencia daño de área en dobles e individuales",
+      "status": "passed",
+      "observed": {
+        "singles": [
+          186,
+          222
+        ],
+        "doubles": [
+          138,
+          164
+        ]
+      }
+    },
+    {
+      "id": "C13",
+      "description": "Espacio Raro devuelve daño cero sin resolver una secuencia de turnos",
+      "status": "passed",
+      "observed": {
+        "damage": [
+          0,
+          0
+        ],
+        "interpretation": "No demuestra que Espacio Raro llegue a activarse."
+      }
+    },
+    {
+      "id": "C14",
+      "description": "Sorpresa conserva prioridad +3 en los datos de la biblioteca",
+      "status": "passed",
+      "observed": 3
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "SP_ABOVE_32",
+      "acceptedByLibrary": true,
+      "input": {
+        "spe": 33
+      },
+      "stats": {
+        "hp": 183,
+        "atk": 150,
+        "def": 115,
+        "spa": 100,
+        "spd": 105,
+        "spe": 155
+      }
+    },
+    {
+      "id": "SP_TOTAL_ABOVE_66",
+      "acceptedByLibrary": true,
+      "input": {
+        "hp": 32,
+        "atk": 32,
+        "def": 32
+      },
+      "stats": {
+        "hp": 215,
+        "atk": 182,
+        "def": 147,
+        "spa": 100,
+        "spd": 105,
+        "spe": 122
+      }
+    },
+    {
+      "id": "RAW_EVS_PASSED_AS_SP",
+      "acceptedByLibrary": true,
+      "input": {
+        "spe": 252
+      },
+      "stats": {
+        "hp": 183,
+        "atk": 150,
+        "def": 115,
+        "spa": 100,
+        "spd": 105,
+        "spe": 374
+      }
+    }
+  ]
+}
